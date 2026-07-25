@@ -211,7 +211,19 @@ a { color: inherit; }
 .field.has-error textarea {
   border-color: var(--bad);
 }
+.build-credit {
+  margin-top: 6px;
+  font-size: 12px;
+}
 
+.build-credit a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+}
+
+.build-credit a:hover {
+  color: var(--ink);
+}
 .error-text {
   display: none;
   color: var(--bad);
