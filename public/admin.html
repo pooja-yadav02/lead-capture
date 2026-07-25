@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Leads · Fieldnote Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="shell">
+  <header class="admin-header">
+    <div>
+      <h1>Leads</h1>
+      <p class="sub">Every inquiry submitted through the landing page.</p>
+    </div>
+  </header>
+
+  <div class="stats-row" id="stats-row"></div>
+
+  <div class="admin-toolbar">
+    <input
+      type="text"
+      class="search-input"
+      id="search-input"
+      placeholder="Search by name, email, or message…"
+      aria-label="Search leads"
+    />
+    <select class="filter-select" id="status-filter" aria-label="Filter by status">
+      <option value="">All statuses</option>
+      <option value="New">New</option>
+      <option value="Contacted">Contacted</option>
+      <option value="Closed">Closed</option>
+    </select>
+  </div>
+
+  <div class="leads-table-wrap">
+    <table class="leads-table" id="leads-table">
+      <thead>
+        <tr>
+          <th>Lead</th>
+          <th>Budget</th>
+          <th>Message</th>
+          <th>Received</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="leads-tbody">
+        <tr><td colspan="5" class="loading-state">Loading leads…</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

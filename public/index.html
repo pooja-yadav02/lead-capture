@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fieldnote Studio — Let's talk about your project</title>
+<meta name="description" content="Tell us about your project and budget. We reply within one business day." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <div class="brand"><span class="brand-mark"></span> Fieldnote Studio</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="shell">
+    <p class="eyebrow">New project inquiry</p>
+    <h1>Tell us what you're building. We'll tell you if we're the right fit.</h1>
+    <p class="lede">A short brief now saves everyone a round of back-and-forth later. We read every submission and reply within one business day.</p>
+  </div>
+</section>
+
+<main class="shell layout">
+  <div class="pitch">
+    <h2>How this works</h2>
+    <p>No sales calls until we've actually looked at your brief. Here's what happens after you submit:</p>
+    <ol class="pitch-list">
+      <li><span class="num">01</span><span>Your message lands directly with the studio lead — not a queue.</span></li>
+      <li><span class="num">02</span><span>We check it against our current capacity and your budget range.</span></li>
+      <li><span class="num">03</span><span>You hear back within one business day, either way.</span></li>
+    </ol>
+  </div>
+
+  <div class="form-card">
+    <h2>Start the conversation</h2>
+    <p class="sub">All fields are required.</p>
+
+    <form id="lead-form" novalidate>
+      <div class="field" id="field-name">
+        <label for="name">Name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" maxlength="100" />
+        <p class="error-text" id="error-name"></p>
+      </div>
+
+      <div class="field" id="field-email">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" maxlength="254" />
+        <p class="error-text" id="error-email"></p>
+      </div>
+
+      <div class="field" id="field-budgetRange">
+        <label for="budgetRange">Budget range <span class="req">*</span></label>
+        <select id="budgetRange" name="budgetRange">
+          <option value="" disabled selected>Select a range</option>
+          <option>Under $1,000</option>
+          <option>$1,000 - $5,000</option>
+          <option>$5,000 - $15,000</option>
+          <option>$15,000 - $50,000</option>
+          <option>$50,000+</option>
+        </select>
+        <p class="error-text" id="error-budgetRange"></p>
+      </div>
+
+      <div class="field" id="field-message">
+        <label for="message">Project details <span class="req">*</span></label>
+        <textarea id="message" name="message" maxlength="2000" placeholder="What are you trying to build, and by when?"></textarea>
+        <p class="char-count"><span id="char-count">0</span> / 2000</p>
+        <p class="error-text" id="error-message"></p>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">Send inquiry</button>
+
+      <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">Fieldnote Studio · Replies within one business day</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
